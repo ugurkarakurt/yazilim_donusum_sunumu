@@ -39,21 +39,21 @@ const ProcessPresentation: React.FC = () => {
 
   const sections: Sections = {
     current: {
-      title: "Current State Analysis (Mevcut Durum Analizi)",
+      title: "Mevcut Durum Analizi (Current State Analysis)",
       icon: <Code className={styles.icon} />,
       color: "#f37070",
-      description: "Assessment of current processes and technical debt analysis (Mevcut süreçler ve teknik borç analizi)",
+      description: "Mevcut süreçler ve teknik borç analizi (Assessment of current processes and technical debt analysis)",
       items: [
         {
-          title: "Communication & Integration Issues (İletişim ve Entegrasyon Sorunları)",
-          description: "Cross-team coordination challenges (Ekipler arası koordinasyon zorlukları)",
+          title: "İletişim ve Entegrasyon Sorunları (Communication & Integration Issues)",
+          description: "Ekipler arası koordinasyon zorlukları (Cross-team coordination challenges)",
           details: [
-            "Duplicate work streams (Tekrarlanan iş akışları) - Farklı ekiplerin aynı sorunu çözmek için çalışması",
-            "Information silos (Bilgi siloları) - Ekipler arası bilgi paylaşımının yetersizliği",
-            "Delayed feedback loops (Gecikmeli geri bildirim döngüleri) - İletişim kopuklukları nedeniyle geç alınan kararlar",
-            "Unclear requirements (Belirsiz gereksinimler) - Net olmayan iş tanımları ve beklentiler",
-            "Process bottlenecks (Süreç darboğazları) - Onay ve kontrol noktalarında yaşanan gecikmeler",
-            "Tool fragmentation (Araç parçalanması) - Farklı ekiplerin farklı araçlar kullanması"
+            "Tekrarlanan iş akışları (Duplicate work streams) - Farklı ekiplerin aynı sorunu çözmek için çalışması",
+            "Bilgi siloları (Information silos) - Ekipler arası bilgi paylaşımının yetersizliği",
+            "Gecikmeli geri bildirim döngüleri (Delayed feedback loops) - İletişim kopuklukları nedeniyle geç alınan kararlar",
+            "Belirsiz gereksinimler (Unclear requirements) - Net olmayan iş tanımları ve beklentiler",
+            "Süreç darboğazları (Process bottlenecks) - Onay ve kontrol noktalarında yaşanan gecikmeler",
+            "Araç parçalanması (Tool fragmentation) - Farklı ekiplerin farklı araçlar kullanması"
           ],
           importance: "high",
           svg: (
@@ -66,20 +66,20 @@ const ProcessPresentation: React.FC = () => {
             </svg>
           ),
           metrics: [
-            { label: "Team sync meetings/week", value: "2", trend: "down" },
-            { label: "Avg. response time", value: "48h", trend: "up" }
+            { label: "Haftalık ekip toplantıları (Team sync meetings/week)", value: "2", trend: "down" },
+            { label: "Ortalama yanıt süresi (Avg. response time)", value: "48h", trend: "up" }
           ]
         },
         {
-          title: "Technical Debt & Legacy Systems (Teknik Borç ve Eski Sistemler)",
-          description: "System maintenance and modernization challenges (Sistem bakımı ve modernizasyon zorlukları)",
+          title: "Teknik Borç ve Eski Sistemler (Technical Debt & Legacy Systems)",
+          description: "Sistem bakımı ve modernizasyon zorlukları (System maintenance and modernization challenges)",
           details: [
-            "Outdated codebase (Güncel olmayan kod tabanı) - Modern pratiklerle uyumsuz eski kod",
-            "Manual processes (Manuel süreçler) - Otomatize edilmemiş deployment ve test süreçleri",
-            "Limited test coverage (Sınırlı test kapsamı) - Yetersiz unit ve integration testleri",
-            "Security vulnerabilities (Güvenlik açıkları) - Güncel olmayan bağımlılıklar ve güvenlik riskleri",
-            "Performance issues (Performans sorunları) - Optimize edilmemiş kod ve veritabanı sorguları",
-            "Documentation gaps (Dokümantasyon eksiklikleri) - Yetersiz veya güncel olmayan teknik dokümantasyon"
+            "Güncel olmayan kod tabanı (Outdated codebase) - Modern pratiklerle uyumsuz eski kod",
+            "Manuel süreçler (Manual processes) - Otomatize edilmemiş deployment ve test süreçleri",
+            "Sınırlı test kapsamı (Limited test coverage) - Yetersiz unit ve integration testleri",
+            "Güvenlik açıkları (Security vulnerabilities) - Güncel olmayan bağımlılıklar ve güvenlik riskleri",
+            "Performans sorunları (Performance issues) - Optimize edilmemiş kod ve veritabanı sorguları",
+            "Dokümantasyon eksiklikleri (Documentation gaps) - Yetersiz veya güncel olmayan teknik dokümantasyon"
           ],
           importance: "high",
           svg: (
@@ -90,28 +90,28 @@ const ProcessPresentation: React.FC = () => {
             </svg>
           ),
           metrics: [
-            { label: "Code coverage", value: "35%", trend: "down" },
-            { label: "Bug resolution time", value: "4.2d", trend: "up" }
+            { label: "Kod kapsama oranı (Code coverage)", value: "35%", trend: "down" },
+            { label: "Hata çözüm süresi (Bug resolution time)", value: "4.2d", trend: "up" }
           ]
         }
       ]
     },
     goals: {
-      title: "Strategic Goals & Vision (Stratejik Hedefler ve Vizyon)",
+      title: "Stratejik Hedefler ve Vizyon (Strategic Goals & Vision)",
       icon: <Target className={styles.icon} />,
       color: "#5099f8",
-      description: "Future state vision and transformation objectives (Gelecek durum vizyonu ve dönüşüm hedefleri)",
+      description: "Gelecek durum vizyonu ve dönüşüm hedefleri (Future state vision and transformation objectives)",
       items: [
         {
-          title: "Modern Development Infrastructure (Modern Geliştirme Altyapısı)",
-          description: "Cloud-native and scalable architecture (Bulut tabanlı ve ölçeklenebilir mimari)",
+          title: "Modern Geliştirme Altyapısı (Modern Development Infrastructure)",
+          description: "Bulut tabanlı ve ölçeklenebilir mimari (Cloud-native and scalable architecture)",
           details: [
-            "Microservices adoption (Mikroservis adaptasyonu) - Monolitik yapıdan mikroservislere geçiş",
-            "Cloud infrastructure (Bulut altyapısı) - AWS/Azure/GCP üzerinde modern altyapı",
-            "Container orchestration (Konteyner orkestrasyonu) - Kubernetes ile ölçeklenebilir deploymentlar",
-            "CI/CD automation (CI/CD otomasyonu) - Tam otomatik build ve deployment süreçleri",
-            "Infrastructure as Code (Kod olarak Altyapı) - Terraform/CloudFormation ile altyapı yönetimi",
-            "Service mesh implementation (Servis mesh implementasyonu) - Istio/Linkerd ile servis yönetimi"
+            "Mikroservis adaptasyonu (Microservices adoption) - Monolitik yapıdan mikroservislere geçiş",
+            "Bulut altyapısı (Cloud infrastructure) - AWS/Azure/GCP üzerinde modern altyapı",
+            "Konteyner orkestrasyonu (Container orchestration) - Kubernetes ile ölçeklenebilir deploymentlar",
+            "CI/CD otomasyonu (CI/CD automation) - Tam otomatik build ve deployment süreçleri",
+            "Kod olarak Altyapı (Infrastructure as Code) - Terraform/CloudFormation ile altyapı yönetimi",
+            "Servis mesh implementasyonu (Service mesh implementation) - Istio/Linkerd ile servis yönetimi"
           ],
           importance: "high",
           svg: (
@@ -123,20 +123,20 @@ const ProcessPresentation: React.FC = () => {
             </svg>
           ),
           metrics: [
-            { label: "Target deployment freq.", value: "Daily", trend: "up" },
-            { label: "Infrastructure as Code", value: "100%", trend: "up" }
+            { label: "Hedef deployment sıklığı (Target deployment freq.)", value: "Daily", trend: "up" },
+            { label: "Altyapı kod oranı (Infrastructure as Code)", value: "100%", trend: "up" }
           ]
         },
         {
-          title: "Quality & Performance Standards (Kalite ve Performans Standartları)",
-          description: "Measurable quality improvements (Ölçülebilir kalite iyileştirmeleri)",
+          title: "Kalite ve Performans Standartları (Quality & Performance Standards)",
+          description: "Ölçülebilir kalite iyileştirmeleri (Measurable quality improvements)",
           details: [
-            "Test automation (Test otomasyonu) - End-to-end test süreçlerinin otomatizasyonu",
-            "Performance monitoring (Performans izleme) - Real-time sistem performans takibi",
-            "Security standards (Güvenlik standartları) - SAST/DAST ve güvenlik taramaları",
-            "Code quality metrics (Kod kalite metrikleri) - Sonar ve benzeri araçlarla kod analizi",
-            "DevSecOps practices (DevSecOps pratikleri) - Güvenliğin geliştirme sürecine entegrasyonu",
-            "Automated QA processes (Otomatik QA süreçleri) - Kalite kontrol süreçlerinin otomasyonu"
+            "Test otomasyonu (Test automation) - End-to-end test süreçlerinin otomatizasyonu",
+            "Performans izleme (Performance monitoring) - Real-time sistem performans takibi",
+            "Güvenlik standartları (Security standards) - SAST/DAST ve güvenlik taramaları",
+            "Kod kalite metrikleri (Code quality metrics) - Sonar ve benzeri araçlarla kod analizi",
+            "DevSecOps pratikleri (DevSecOps practices) - Güvenliğin geliştirme sürecine entegrasyonu",
+            "Otomatik QA süreçleri (Automated QA processes) - Kalite kontrol süreçlerinin otomasyonu"
           ],
           importance: "high",
           svg: (
@@ -146,28 +146,28 @@ const ProcessPresentation: React.FC = () => {
             </svg>
           ),
           metrics: [
-            { label: "Target test coverage", value: "90%", trend: "up" },
-            { label: "QA automation level", value: "95%", trend: "up" }
+            { label: "Hedef test kapsamı (Target test coverage)", value: "90%", trend: "up" },
+            { label: "QA otomasyon seviyesi (QA automation level)", value: "95%", trend: "up" }
           ]
         }
       ]
     },
     changes: {
-      title: "Implementation Strategy (Uygulama Stratejisi)",
+      title: "Uygulama Stratejisi (Implementation Strategy)",
       icon: <ArrowRight className={styles.icon} />,
       color: "#63b981",
-      description: "Transformation roadmap and implementation steps (Dönüşüm yol haritası ve uygulama adımları)",
+      description: "Dönüşüm yol haritası ve uygulama adımları (Transformation roadmap and implementation steps)",
       items: [
         {
-          title: "DevOps & Automation Pipeline (DevOps ve Otomasyon)",
-          description: "Continuous integration and deployment pipeline (Sürekli entegrasyon ve deployment süreçleri)",
+          title: "DevOps ve Otomasyon (DevOps & Automation Pipeline)",
+          description: "Sürekli entegrasyon ve deployment süreçleri (Continuous integration and deployment pipeline)",
           details: [
-            "Git workflow implementation (Git iş akışı) - Branch ve merge stratejilerinin belirlenmesi",
-            "Automated testing setup (Otomatik test kurulumu) - Unit, integration ve e2e testlerin hazırlanması",
-            "CI/CD pipeline creation (CI/CD pipeline oluşturma) - Jenkins/GitLab CI yapılandırması",
-            "Infrastructure automation (Altyapı otomasyonu) - Terraform ile altyapı kodlaması",
-            "Monitoring implementation (İzleme implementasyonu) - Prometheus/Grafana kurulumu",
-            "Automated deployment (Otomatik deployment) - Zero-downtime deployment konfigürasyonu"
+            "Git iş akışı (Git workflow implementation) - Branch ve merge stratejilerinin belirlenmesi",
+            "Otomatik test kurulumu (Automated testing setup) - Unit, integration ve e2e testlerin hazırlanması",
+            "CI/CD pipeline oluşturma (CI/CD pipeline creation) - Jenkins/GitLab CI yapılandırması",
+            "Altyapı otomasyonu (Infrastructure automation) - Terraform ile altyapı kodlaması",
+            "İzleme implementasyonu (Monitoring implementation) - Prometheus/Grafana kurulumu",
+            "Otomatik deployment (Automated deployment) - Zero-downtime deployment konfigürasyonu"
           ],
           importance: "high",
           svg: (
@@ -180,20 +180,20 @@ const ProcessPresentation: React.FC = () => {
             </svg>
           ),
           metrics: [
-            { label: "Automation coverage", value: "95%", trend: "up" },
-            { label: "Deployment frequency", value: "Daily", trend: "up" }
+            { label: "Otomasyon kapsamı (Automation coverage)", value: "95%", trend: "up" },
+            { label: "Deployment sıklığı (Deployment frequency)", value: "Daily", trend: "up" }
           ]
         },
         {
-          title: "Agile Transformation (Çevik Dönüşüm)",
-          description: "Modern development methodology adoption (Modern geliştirme metodolojisi adaptasyonu)",
+          title: "Çevik Dönüşüm (Agile Transformation)",
+          description: "Modern geliştirme metodolojisi adaptasyonu (Modern development methodology adoption)",
           details: [
-            "Scrum implementation (Scrum implementasyonu) - Sprint ve ceremonilerin kurulumu",
-            "Kanban processes (Kanban süreçleri) - İş akışı görselleştirmesi ve limitleri",
-            "Agile ceremonies (Çevik toplantılar) - Daily standup, retro ve planning meetings",
-            "Story mapping (Kullanıcı hikayesi haritalama) - Gereksinimlerin agile formatında yazılması",
-            "Velocity tracking (Hız takibi) - Sprint velocity ve burndown charts",
-            "Continuous feedback (Sürekli geri bildirim) - Retrospektif ve iyileştirme döngüleri"
+            "Scrum implementasyonu (Scrum implementation) - Sprint ve ceremonilerin kurulumu",
+            "Kanban süreçleri (Kanban processes) - İş akışı görselleştirmesi ve limitleri",
+            "Çevik toplantılar (Agile ceremonies) - Daily standup, retro ve planning meetings",
+            "Kullanıcı hikayesi haritalama (Story mapping) - Gereksinimlerin agile formatında yazılması",
+            "Hız takibi (Velocity tracking) - Sprint velocity ve burndown charts",
+            "Sürekli geri bildirim (Continuous feedback) - Retrospektif ve iyileştirme döngüleri"
           ],
           importance: "high",
           svg: (
@@ -203,28 +203,28 @@ const ProcessPresentation: React.FC = () => {
             </svg>
           ),
           metrics: [
-            { label: "Sprint predictability", value: "85%", trend: "up" },
-            { label: "Team velocity", value: "+40%", trend: "up" }
+            { label: "Sprint öngörülebilirliği (Sprint predictability)", value: "85%", trend: "up" },
+            { label: "Ekip hızı (Team velocity)", value: "+40%", trend: "up" }
           ]
         }
       ]
     },
     timeline: {
-      title: "Implementation Timeline (Uygulama Zaman Çizelgesi)",
+      title: "Uygulama Zaman Çizelgesi (Implementation Timeline)",
       icon: <Clock className={styles.icon} />,
       color: "#a45df0",
-      description: "Phased transformation approach (Aşamalı dönüşüm yaklaşımı)",
+      description: "Aşamalı dönüşüm yaklaşımı (Phased transformation approach)",
       items: [
         {
-          title: "Phase 1: Foundation (Faz 1: Temel Hazırlık)",
-          description: "Initial 3 months - Core infrastructure setup (İlk 3 ay - Temel altyapı kurulumu)",
+          title: "Faz 1: Temel Hazırlık (Phase 1: Foundation)",
+          description: "İlk 3 ay - Temel altyapı kurulumu (Initial 3 months - Core infrastructure setup)",
           details: [
-            "Development workflow setup (Geliştirme iş akışı) - Git ve CI/CD temel kurulumu",
-            "Team restructuring (Ekip yapılandırması) - Agile takımların oluşturulması",
-            "Initial automation (İlk otomasyon) - Temel deployment otomasyonu",
-            "Basic monitoring (Temel izleme) - Logging ve monitoring başlangıcı",
-            "Training program (Eğitim programı) - Teknik ve agile eğitimlerin planlanması",
-            "Documentation initiative (Dokümantasyon) - Bilgi bankası oluşturulması"
+            "Geliştirme iş akışı (Development workflow setup) - Git ve CI/CD temel kurulumu",
+            "Ekip yapılandırması (Team restructuring) - Agile takımların oluşturulması",
+            "İlk otomasyon (Initial automation) - Temel deployment otomasyonu",
+            "Temel izleme (Basic monitoring) - Logging ve monitoring başlangıcı",
+            "Eğitim programı (Training program) - Teknik ve agile eğitimlerin planlanması",
+            "Dokümantasyon (Documentation initiative) - Bilgi bankası oluşturulması"
           ],
           importance: "high",
           svg: (
@@ -232,24 +232,24 @@ const ProcessPresentation: React.FC = () => {
               <rect x="10" y="40" width="25" height="20" fill="#c084fc" />
               <rect x="40" y="40" width="25" height="20" fill="#a855f7" />
               <rect x="70" y="40" width="25" height="20" fill="#7c3aed" />
-              <text x="50" y="35" fontSize="8" fill="#7c3aed" textAnchor="middle">Phase 1</text>
+              <text x="50" y="35" fontSize="8" fill="#7c3aed" textAnchor="middle">Faz 1</text>
             </svg>
           ),
           metrics: [
-            { label: "Timeline progress", value: "0%", trend: "up" },
-            { label: "Foundation completed", value: "0%", trend: "up" }
+            { label: "Zaman çizelgesi ilerlemesi (Timeline progress)", value: "0%", trend: "up" },
+            { label: "Temel tamamlanma (Foundation completed)", value: "0%", trend: "up" }
           ]
         },
         {
-          title: "Phase 2: Acceleration (Faz 2: Hızlandırma)",
-          description: "Months 4-6 - Advanced implementation (4-6. aylar - İleri seviye implementasyon)",
+          title: "Faz 2: Hızlandırma (Phase 2: Acceleration)",
+          description: "4-6. aylar - İleri seviye implementasyon (Months 4-6 - Advanced implementation)",
           details: [
-            "Advanced testing framework (İleri test altyapısı) - Kapsamlı test otomasyonu kurulumu",
-            "Performance optimization (Performans optimizasyonu) - Sistem performans iyileştirmeleri",
-            "Security hardening (Güvenlik güçlendirme) - Güvenlik tarama ve düzeltmeleri",
-            "Microservices transition (Mikroservis geçişi) - İlk mikroservis dönüşümleri",
-            "Cloud migration (Bulut geçişi) - Bulut altyapısına geçiş başlangıcı",
-            "Team autonomy (Ekip otonomisi) - Ekiplerin kendi kararlarını alabilmesi"
+            "İleri test altyapısı (Advanced testing framework) - Kapsamlı test otomasyonu kurulumu",
+            "Performans optimizasyonu (Performance optimization) - Sistem performans iyileştirmeleri",
+            "Güvenlik güçlendirme (Security hardening) - Güvenlik tarama ve düzeltmeleri",
+            "Mikroservis geçişi (Microservices transition) - İlk mikroservis dönüşümleri",
+            "Bulut geçişi (Cloud migration) - Bulut altyapısına geçiş başlangıcı",
+            "Ekip otonomisi (Team autonomy) - Ekiplerin kendi kararlarını alabilmesi"
           ],
           importance: "medium",
           svg: (
@@ -257,68 +257,68 @@ const ProcessPresentation: React.FC = () => {
               <path d="M20 80 C 40 80, 60 40, 80 20" stroke="#7c3aed" strokeWidth="4" fill="none" />
               <circle cx="20" cy="80" r="5" fill="#c084fc" />
               <circle cx="80" cy="20" r="5" fill="#c084fc" />
-              <text x="50" y="50" fontSize="8" fill="#7c3aed" textAnchor="middle">Phase 2</text>
+              <text x="50" y="50" fontSize="8" fill="#7c3aed" textAnchor="middle">Faz 2</text>
             </svg>
           ),
           metrics: [
-            { label: "Advanced features", value: "0%", trend: "up" },
-            { label: "Time remaining", value: "6mo", trend: "down" }
+            { label: "İleri özellikler (Advanced features)", value: "0%", trend: "up" },
+            { label: "Kalan süre (Time remaining)", value: "6mo", trend: "down" }
           ]
         }
       ]
     },
     benefits: {
-      title: "Expected Benefits & ROI (Beklenen Faydalar ve Yatırım Getirisi)",
+      title: "Beklenen Faydalar ve Yatırım Getirisi (Expected Benefits & ROI)",
       icon: <BarChart className={styles.icon} />,
       color: "#f39238",
-      description: "Tangible improvements and business impact (Somut iyileştirmeler ve iş etkisi)",
+      description: "Somut iyileştirmeler ve iş etkisi (Tangible improvements and business impact)",
       items: [
         {
-          title: "Performance & Efficiency Gains (Performans ve Verimlilik Artışı)",
-          description: "Quantifiable operational improvements (Ölçülebilir operasyonel iyileştirmeler)",
+          title: "Performans ve Verimlilik Artışı (Performance & Efficiency Gains)",
+          description: "Ölçülebilir operasyonel iyileştirmeler (Quantifiable operational improvements)",
           details: [
-            "Faster deployments (Hızlı deploymentlar) - Deployment süresinde %90 azalma",
-            "Reduced errors (Azalan hatalar) - Production hatalarında %60 düşüş",
-            "Team productivity (Ekip üretkenliği) - Developer verimliliğinde %40 artış",
-            "Cost optimization (Maliyet optimizasyonu) - Operasyonel maliyetlerde %30 düşüş",
-            "Time-to-market (Pazara çıkış süresi) - Feature delivery süresinde %50 iyileşme",
-            "Resource utilization (Kaynak kullanımı) - Sistem kaynak kullanımında %35 optimizasyon"
+            "Hızlı deploymentlar (Faster deployments) - Deployment süresinde %90 azalma",
+            "Azalan hatalar (Reduced errors) - Production hatalarında %60 düşüş",
+            "Ekip üretkenliği (Team productivity) - Developer verimliliğinde %40 artış",
+            "Maliyet optimizasyonu (Cost optimization) - Operasyonel maliyetlerde %30 düşüş",
+            "Pazara çıkış süresi (Time-to-market) - Feature delivery süresinde %50 iyileşme",
+            "Kaynak kullanımı (Resource utilization) - Sistem kaynak kullanımında %35 optimizasyon"
           ],
           importance: "high",
           svg: (
             <svg viewBox="0 0 100 100" className={styles.svgContainer}>
               <path d="M10 90 L90 90 L90 10" fill="none" stroke="#f59e0b" strokeWidth="4" />
               <path d="M10 70 L30 50 L50 60 L70 30" fill="none" stroke="#fcd34d" strokeWidth="4" />
-              <text x="50" y="95" fontSize="8" fill="#f59e0b" textAnchor="middle">Performance</text>
+              <text x="50" y="95" fontSize="8" fill="#f59e0b" textAnchor="middle">Performans</text>
             </svg>
           ),
           metrics: [
-            { label: "Overall efficiency", value: "+40%", trend: "up" },
-            { label: "Cost reduction", value: "30%", trend: "down" }
+            { label: "Genel verimlilik artışı (Overall efficiency)", value: "+40%", trend: "up" },
+            { label: "Maliyet düşüşü (Cost reduction)", value: "30%", trend: "down" }
           ]
         },
         {
-          title: "Quality & Reliability Improvement (Kalite ve Güvenilirlik İyileştirmesi)",
-          description: "Enhanced system stability and quality (Gelişmiş sistem stabilitesi ve kalite)",
+          title: "Kalite ve Güvenilirlik İyileştirmesi (Quality & Reliability Improvement)",
+          description: "Gelişmiş sistem stabilitesi ve kalite (Enhanced system stability and quality)",
           details: [
-            "High availability (Yüksek erişilebilirlik) - Sistem uptime oranında %99.9'a ulaşma",
-            "Quality metrics (Kalite metrikleri) - Kod kalite skorunda %40 artış",
-            "Security posture (Güvenlik duruşu) - Güvenlik açıklarında %70 azalma",
-            "Customer satisfaction (Müşteri memnuniyeti) - Kullanıcı memnuniyetinde %45 artış",
-            "System reliability (Sistem güvenilirliği) - Beklenmeyen kesintilerde %80 azalma",
-            "Technical excellence (Teknik mükemmellik) - Modern teknoloji adaptasyonunda %100 artış"
+            "Yüksek erişilebilirlik (High availability) - Sistem uptime oranında %99.9'a ulaşma",
+            "Kalite metrikleri (Quality metrics) - Kod kalite skorunda %40 artış",
+            "Güvenlik duruşu (Security posture) - Güvenlik açıklarında %70 azalma",
+            "Müşteri memnuniyeti (Customer satisfaction) - Kullanıcı memnuniyetinde %45 artış",
+            "Sistem güvenilirliği (System reliability) - Beklenmeyen kesintilerde %80 azalma",
+            "Teknik mükemmellik (Technical excellence) - Modern teknoloji adaptasyonunda %100 artış"
           ],
           importance: "high",
           svg: (
             <svg viewBox="0 0 100 100" className={styles.svgContainer}>
               <circle cx="50" cy="50" r="35" fill="none" stroke="#f59e0b" strokeWidth="4" />
               <path d="M35 50 L45 60 L65 40" stroke="#fcd34d" strokeWidth="6" fill="none" />
-              <text x="50" y="90" fontSize="8" fill="#f59e0b" textAnchor="middle">Quality</text>
+              <text x="50" y="90" fontSize="8" fill="#f59e0b" textAnchor="middle">Kalite</text>
             </svg>
           ),
           metrics: [
-            { label: "System reliability", value: "99.9%", trend: "up" },
-            { label: "Quality score", value: "85%", trend: "up" }
+            { label: "Sistem güvenilirliği (System reliability)", value: "99.9%", trend: "up" },
+            { label: "Kalite skoru (Quality score)", value: "85%", trend: "up" }
           ]
         }
       ]
