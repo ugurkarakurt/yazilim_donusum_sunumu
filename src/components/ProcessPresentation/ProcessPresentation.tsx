@@ -6,31 +6,8 @@ import {
   ArrowRight, Code, Target, X, TrendingUp, CheckCircle2,
 } from 'lucide-react';
 import styles from './styles.module.css';
-
-interface SectionItem {
-  title: string;
-  description: string;
-  details?: string[];
-  importance?: 'high' | 'medium' | 'low';
-  svg: JSX.Element;
-  metrics?: {
-    label: string;
-    value: string;
-    trend?: 'up' | 'down';
-  }[];
-}
-
-interface Section {
-  title: string;
-  icon: JSX.Element;
-  color: string;
-  description: string;
-  items: SectionItem[];
-}
-
-type Sections = {
-  [key: string]: Section;
-};
+import { SectionItem, Sections } from './types';
+import Image from 'next/image';
 
 const ProcessPresentation: React.FC = () => {
   const [activeSection, setActiveSection] = useState('current');
@@ -57,17 +34,18 @@ const ProcessPresentation: React.FC = () => {
           ],
           importance: "high",
           svg: (
-            <svg viewBox="0 0 100 100" className={styles.svgContainer}>
-              <rect x="15" y="20" width="30" height="60" fill="#fee2e2" />
-              <rect x="55" y="20" width="30" height="60" fill="#fee2e2" />
-              <text x="30" y="50" fontSize="12" fill="#ef4444" textAnchor="middle">FE</text>
-              <text x="70" y="50" fontSize="12" fill="#ef4444" textAnchor="middle">BE</text>
-              <line x1="45" y1="50" x2="55" y2="50" stroke="#ef4444" strokeWidth="2" strokeDasharray="4,4" />
-            </svg>
+            <Image
+              unoptimized
+              width={50}
+              height={50}
+              src="/peak-performers-warning.png"
+              alt="Description"
+              className={styles.svgContainer}
+            />
           ),
           metrics: [
-            { label: "Test coverage", value: "20%", trend: "down" },  // Genelde projelerde başlangıçta düşük test coverage olur
-            { label: "Dokümantasyon oranı", value: "30%", trend: "down" } // Dokümantasyon eksikliği yaygın bir sorundur
+            { label: "Test coverage", value: "20%", trend: "down" },
+            { label: "Dokümantasyon oranı", value: "30%", trend: "down" }
           ]
         },
         {
@@ -83,11 +61,14 @@ const ProcessPresentation: React.FC = () => {
           ],
           importance: "high",
           svg: (
-            <svg viewBox="0 0 100 100" className={styles.svgContainer}>
-              <circle cx="50" cy="50" r="35" fill="#fee2e2" />
-              <path d="M30 50 L45 65 L75 35" stroke="#ef4444" strokeWidth="8" fill="none" />
-              <text x="50" y="85" fontSize="10" fill="#ef4444" textAnchor="middle">Agile</text>
-            </svg>
+            <Image
+              unoptimized
+              width={50}
+              height={50}
+              src="/done-warning.png"
+              alt="Description"
+              className={styles.svgContainer}
+            />
           ),
           metrics: [
             { label: "Sprint tamamlanma", value: "40%", trend: "down" }, // Planlanan işlerin tamamlanma oranı
@@ -115,13 +96,15 @@ const ProcessPresentation: React.FC = () => {
           ],
           importance: "high",
           svg: (
-            <svg viewBox="0 0 100 100" className={styles.svgContainer}>
-              <rect x="10" y="20" width="15" height="60" fill="#bfdbfe" />
-              <rect x="30" y="30" width="15" height="50" fill="#93c5fd" />
-              <rect x="50" y="25" width="15" height="55" fill="#60a5fa" />
-              <rect x="70" y="35" width="15" height="45" fill="#3b82f6" />
-              <text x="50" y="90" fontSize="8" fill="#1d4ed8" textAnchor="middle">Tech Stack</text>
-            </svg>
+            <Image
+              unoptimized
+              priority
+              width={50}
+              height={50}
+              src="/bar-chart.png"
+              alt="Description"
+              className={styles.svgContainer}
+            />
           ),
           metrics: [
             { label: "Hedef test coverage", value: "70%", trend: "up" }, // Başlangıç için daha gerçekçi bir hedef
@@ -141,11 +124,15 @@ const ProcessPresentation: React.FC = () => {
           ],
           importance: "high",
           svg: (
-            <svg viewBox="0 0 100 100" className={styles.svgContainer}>
-              <circle cx="50" cy="50" r="35" fill="none" stroke="#60a5fa" strokeWidth="4" />
-              <path d="M25 50 L40 65 L75 30" stroke="#1d4ed8" strokeWidth="6" fill="none" />
-              <text x="50" y="90" fontSize="8" fill="#1d4ed8" textAnchor="middle">Agile</text>
-            </svg>
+            <Image
+              unoptimized
+              priority
+              width={50}
+              height={50}
+              src="/done-info.png"
+              alt="Description"
+              className={styles.svgContainer}
+            />
           ),
           metrics: [
             { label: "Sprint başarı hedefi", value: "80%", trend: "up" }, // Sprint'te planlanan işlerin tamamlanma hedefi
@@ -173,13 +160,14 @@ const ProcessPresentation: React.FC = () => {
           ],
           importance: "high",
           svg: (
-            <svg viewBox="0 0 100 100" className={styles.svgContainer}>
-              <circle cx="30" cy="50" r="20" fill="#86efac" strokeWidth="2" stroke="#059669" />
-              <circle cx="70" cy="50" r="20" fill="#86efac" strokeWidth="2" stroke="#059669" />
-              <line x1="45" y1="50" x2="55" y2="50" stroke="#059669" strokeWidth="4" />
-              <text x="30" y="53" fontSize="10" fill="#059669" textAnchor="middle">FE</text>
-              <text x="70" y="53" fontSize="10" fill="#059669" textAnchor="middle">BE</text>
-            </svg>
+            <Image
+              unoptimized
+              width={50}
+              height={50}
+              src="/peak-performers-success.png"
+              alt="Description"
+              className={styles.svgContainer}
+            />
           ),
           metrics: [
             { label: "3 Aylık hedef", value: "40%", trend: "up" }, // İlk 3 ayda ulaşılabilir hedef
@@ -199,14 +187,14 @@ const ProcessPresentation: React.FC = () => {
           ],
           importance: "high",
           svg: (
-            <svg viewBox="0 0 100 100" className={styles.svgContainer}>
-              <path d="M10 90 L90 90 L90 10" fill="none" stroke="#059669" strokeWidth="4" />
-              <path d="M10 70 L30 50 L50 60 L70 30" fill="none" stroke="#34d399" strokeWidth="4" />
-              <circle cx="30" cy="50" r="3" fill="#059669" />
-              <circle cx="50" cy="60" r="3" fill="#059669" />
-              <circle cx="70" cy="30" r="3" fill="#059669" />
-              <text x="50" y="95" fontSize="8" fill="#059669" textAnchor="middle">Progress</text>
-            </svg>
+            <Image
+              unoptimized
+              width={50}
+              height={50}
+              src="/increase.png"
+              alt="Description"
+              className={styles.svgContainer}
+            />
           ),
           metrics: [
             { label: "Agile olgunluk", value: "Başlangıç", trend: "up" }, // Agile adaptasyon seviyesi
@@ -319,14 +307,13 @@ const ProcessPresentation: React.FC = () => {
           {Object.entries(sections).map(([key, section]) => (
             <motion.button
               key={key}
-              whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className={`${styles.navButton} ${activeSection === key ? styles.active : ''}`}
               onClick={() => setActiveSection(key)}
               style={{ backgroundColor: section.color }}
             >
-              {section.icon}
               <span className={styles.buttonText}>{section.title}</span>
+              {section.icon}
             </motion.button>
           ))}
         </nav>
